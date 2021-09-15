@@ -1,0 +1,301 @@
+@font-face {
+  font-family: "Bold";
+  src: url("../fonts/OPERATORMONO-BOLD.OTF");
+}
+@font-face {
+  font-family: "Italic";
+  src: url("../fonts/OPERATORMONO-BOLDITALIC.OTF");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bold";
+}
+body {
+  background: rgb(11, 11, 43);
+}
+p,
+a,
+th,
+td {
+  font-size: 1em;
+}
+.wrapper {
+  width: 80%;
+  margin: 1em auto;
+  position: relative;
+  /* overflow: hidden; */
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  width: 300px;
+  border-radius: 0 0 50% 0;
+  background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+    linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+    linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+    radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+    radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+  z-index: -1;
+  animation: gradienta 5s linear infinite;
+}
+.wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 300px;
+  width: 300px;
+  border-radius: 50% 0 0 0;
+  background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+    linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+    linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+    radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+    radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+  z-index: -1;
+  animation: gradienta 5s linear infinite;
+}
+.container {
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 2px 4px rgb(11 4 26 / 55%), -1px -1px 2px rgb(110 110 110 / 50%);
+  backdrop-filter: blur(100px);
+}
+.container > div {
+  /* background: blue; */
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
+.container .heading {
+  background: linear-gradient(45deg, rgb(2, 177, 247), rgb(29, 83, 243));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  padding-bottom: 0.8em;
+  font-size: 1.5em;
+}
+/* Header Section CSS Start */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header__img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid #fff;
+}
+.header__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.header__details h1 {
+  background: linear-gradient(45deg, rgb(2, 177, 247), rgb(29, 83, 243));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 3em;
+}
+.header__details p {
+  color: #fff;
+  font-family: Italic;
+  text-align: right;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+}
+/* Header Section CSS End */
+
+/* Personal Info Section CSS Start */
+.personal_info table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+.personal_info table tr th,
+.personal_info table tr td {
+  padding: 0.5em 0;
+  font-family: Italic;
+}
+.personal_info table tr th {
+  width: 20%;
+  color: skyblue;
+}
+.personal_info table tr td {
+  width: 80%;
+  color: #fff;
+}
+.personal_info table tr td::before {
+  content: ": ";
+}
+/* Personal Info Section Css End */
+
+/* Educational Experience Section CSS Start */
+.educational_experience table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid skyblue;
+}
+.educational_experience table tr th,
+.educational_experience table tr td {
+  padding: 0.5em 0;
+  font-family: Italic;
+  border: 1px solid skyblue;
+}
+.educational_experience table tr th {
+  color: skyblue;
+}
+.educational_experience table tr td {
+  color: #fff;
+}
+/* Educational Experience Section CSS End */
+
+/* Skills Hobby Section CSS Start */
+.skills_hobby {
+  display: flex;
+}
+.skills {
+  width: 50%;
+}
+.hobby {
+  width: 50%;
+}
+.skills_hobby .list p {
+  color: #fff;
+  font-family: Italic;
+  padding: 0.5em 0;
+}
+.skills_hobby .list p i {
+  background: linear-gradient(45deg, rgb(2, 177, 247), rgb(29, 83, 243));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* Skills Hobby Section CSS End */
+
+/* Contact Section CSS Start */
+.contact .list p {
+  color: #fff;
+  font-family: Italic;
+  padding: 0.5em 0;
+}
+.contact .list p i {
+  background: linear-gradient(45deg, rgb(2, 177, 247), rgb(29, 83, 243));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.contact .list p a {
+  color: #fff;
+  font-family: Italic;
+}
+/* Contact Section CSS End */
+
+/* Animation Start */
+@keyframes gradienta {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+/* Animation End */
+
+/* Media Query For 768px Device */
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 95%;
+  }
+  .wrapper::before {
+    height: 200px;
+    width: 200px;
+  }
+  .wrapper::after {
+    height: 200px;
+    width: 200px;
+  }
+  p,
+  a,
+  th,
+  td {
+    font-size: 0.8em;
+  }
+  .container .heading {
+    font-size: 1.3em;
+  }
+  .header__img {
+    height: 150px;
+    width: 150px;
+    border: 5px solid #fff;
+  }
+  .header__details h1 {
+    font-size: 2em;
+  }
+  .header__details p {
+    font-size: 0.5em;
+  }
+  .responsive {
+    overflow-x: scroll;
+  }
+}
+
+/* Media Query For 425px Device */
+@media only screen and (max-width: 425px) {
+  .wrapper::before {
+    height: 150px;
+    width: 150px;
+  }
+  .wrapper::after {
+    height: 150px;
+    width: 150px;
+  }
+  p,
+  a,
+  th,
+  td {
+    font-size: 0.6em;
+  }
+  .container .heading {
+    font-size: 1em;
+  }
+  .header__img {
+    height: 120px;
+    width: 120px;
+    border: 5px solid #fff;
+  }
+  .header__details h1 {
+    font-size: 1.5em;
+  }
+  .header__details p {
+    font-size: 0.4em;
+  }
+  .personal_info table tr th {
+    width: 35%;
+  }
+  .personal_info table tr td {
+    width: 65%;
+  }
+  .educational_experience table {
+    width: 150%;
+  }
+  .skills_hobby {
+    flex-direction: column;
+  }
+  .skills {
+    width: 100%;
+  }
+  .hobby {
+    margin-top: 2em;
+    width: 100%;
+  }
+}
